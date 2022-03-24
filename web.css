@@ -1,0 +1,233 @@
+/* general stuff bleh */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 50%;
+  scroll-behavior: smooth;
+}
+h1 {
+  font-size: calc(1.5rem + 1vw);
+  font-family: Arial;
+  font-weight: 200;
+}
+h2 {
+  font-size: calc(2rem + 1vw);
+  font-family: Arial;
+  font-weight: 200;
+}
+h3 {
+  font-size: calc(3rem + 1vw);
+  font-family: Arial;
+  font-weight: 1500;
+  text-align: center;
+}
+h4,
+h5,
+h6 {
+  font-size: calc(1.5rem + 1vw);
+  font-family: Arial;
+  font-weight: 1200;
+}
+p,
+a,
+ul,
+li,
+button {
+  font-size: calc(1rem + 1vw);
+  font-family: Arial;
+  font-weight: 500;
+  list-style: none;
+  outline: black;
+  text-decoration: none;
+}
+
+/* end general finally  */
+
+/* class selector */
+.header {
+  background-color: rgba(0, 0, 0, 0);
+}
+.header_nav {
+  box-shadow: 2rem 0rem 2rem rgba(0, 0, 0, 0.507);
+  z-index: 1;
+  position: relative;
+}
+.nav_menu {
+  min-height: 10vh;
+  width: 95%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu_item {
+  flex: 1 1 15rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(39, 40, 43);
+  box-shadow: 0.2rem 0.2rem 0.2rem rgb(2, 7, 7),
+    0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.4);
+}
+.menu_item a {
+  color: silver;
+}
+.header_intro-box {
+  width: 95%;
+  margin: 0 auto;
+  min-height: 50vh;
+  display: flex;
+  gap: 3rem;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://i.ebayimg.com/00/s/OTAwWDE2MDA=/z/NrQAAOSwcSpfCDr4/$_86.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.intro-box_link {
+  display: block;
+  border-bottom: 0.4rem solid rgba(255, 255, 255, 0.6);
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+
+.main_section {
+  width: 95%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.vehicle_title {
+  line-height: 2;
+  padding: 3rem 0;
+}
+.vehicle_text {
+  line-height: 1.5;
+}
+.gallery {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.gallery_imgs {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+.imgs_img-item {
+  flex: 1 1 25rem;
+}
+.img-item_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cars_list {
+  display: grid;
+  grid-template-rows: repeat(auto, minmax(2rem, 4rem));
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
+  min-height: 100vh;
+}
+.list_car {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  line-height: 2;
+  padding: 2rem;
+}
+.list_car:first-child {
+  grid-column: 1/4;
+}
+.list_car:nth-child(4) {
+  grid-row: 2/4;
+  grid-column: 3/4;
+}
+.list_car:last-child {
+  grid-column: 1/3;
+}
+.career {
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.career_title {
+  flex: 3 1 15rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.career_text {
+  flex: 1 1 15rem;
+}
+.footer {
+  background-color: rgb(39, 40, 43);
+}
+.footer_list {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+}
+.links_link {
+  color: silver;
+  letter-spacing: 0.2rem;
+}
+.return-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2;
+}
+.return-button a {
+  width: 100%;
+  height: 100%;
+  display: table-row;
+}
+.return-button a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* end class selector  */
+
+/* id selector  */
+/* end id selector  */
+
+/* media queries  */
+@media all and (max-width: 1200px and max-height:1200px) {
+  .car_list {
+    max-height: fit-content;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media all and (max-width: 600px and max-height:600px) {
+  .career {
+    flex-flow: column wrap;
+  }
+}
+/* end  media queries  */
