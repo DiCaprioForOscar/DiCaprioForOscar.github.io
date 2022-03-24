@@ -215,7 +215,7 @@ button {
 /* end id selector  */
 
 /* media queries  */
-@media all and (max-width: 1200px and max-height:1200px) {
+@media all and (max-width: 1200px) {
   .car_list {
     max-height: fit-content;
     display: flex;
@@ -225,7 +225,7 @@ button {
   }
 }
 
-@media all and (max-width: 600px and max-height:600px) {
+@media all and (max-width: 600px) {
   .career {
     flex-flow: column wrap;
   }
